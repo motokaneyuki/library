@@ -43,23 +43,39 @@ h1 {
 .card {
     border: 1px solid #453F3A;
     border-radius: 5px;
-    padding: 20px;
-    background-color: #DECAC2;
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 50px 1fr 80px;
     grid-template-columns: 1fr 1fr;
 }
 
 .title {
     font-size: x-large;
     grid-column: 1 / 3;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #DECAC2;
+    padding: 20px;
 }
 
 .author {
     font-size: medium;
     grid-column: 1 / 3;
+    background-color: #DECAC2;
+    color: #655c55;
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
+
+.pages {
+    padding-left: 20px;
+    align-self: self-end;
+    padding-bottom: 20px;
+    background-color: ;
 }
 
 .read {
     justify-self: end;
+    padding-right: 20px;
+    align-self: self-end;
+    padding-bottom: 20px;
 }
