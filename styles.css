@@ -16,15 +16,15 @@ h1 {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    padding: 20px 100px;;
+    padding: 20px 80px;;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 20px 100px 2cap 100px;
+    padding: 20px 80px 20px 80px;
     border-bottom: 1px solid #453F3A;
 }
 
@@ -70,7 +70,6 @@ h1 {
     padding-left: 20px;
     align-self: self-end;
     padding-bottom: 20px;
-    background-color: ;
 }
 
 .read {
