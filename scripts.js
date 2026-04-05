@@ -11,3 +11,9 @@ function Book(author, title, pages, read, id) {
     this.read = read;
     this.id = id;
 }
+
+function addBookToLibrary(author, title, pages, read) {
+    const id = crypto.randomUUID();
+    const book = new Book(author, title, pages, read, id);
+    return myLibrary.push(book);
+}
