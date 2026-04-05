@@ -11,15 +11,33 @@ body {
 }
 
 h1 {
-    text-align: center;
-    padding: 20px;
+    text-align: start;
 }
 
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    padding: 0px 100px;;
+    padding: 20px 100px;;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 100px 2cap 100px;
+    border-bottom: 1px solid #453F3A;
+}
+
+.newBookButton {
+    background-color: #453F3A;
+    color: #F6F4F0;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.newBookButton:hover {
+    cursor: pointer;
+    background-color: #655c55;    
 }
 
 .card {
