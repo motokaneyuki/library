@@ -10,7 +10,36 @@
     <div class="mainContainer">
         <div class="header">
             <h1>My Library</h1>
-            <button class="newBookButton">New Book</button>
+            <button command="show-modal" commandfor="bookDialog" class="newBookButton">New Book</button>
+            <dialog id="bookDialog">
+                <form>
+                    <div class="topForm">
+                        <div>Add New Book</div>
+                        <button type="button" command="close" commandfor="bookDialog" class="=closeButton">x</button>
+                    </div>
+                    <ul>
+                        <li>
+                            <label for="title">Title</label>
+                            <input id="title" type="text" name="title">
+                        </li>
+                        <li>
+                            <label for="author">Author</label>
+                            <input id="author" type="text" name="author">
+                        </li>
+                        <li>
+                            <label for="pages">Pages</label>
+                            <input id="pages" type="text" name="pages">
+                        </li>
+                        <li>
+                            <label for="read">Status</label>
+                            <select name="Status">
+                                <option value="Read">Read</option>
+                                <option value="Unread">Unread</option>
+                            </select>
+                        </li>
+                    </ul>
+                </form>
+            </dialog>
         </div>
         <div class="container"></div>
     </div>
