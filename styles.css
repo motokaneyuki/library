@@ -78,3 +78,68 @@ h1 {
     align-self: self-end;
     padding-bottom: 20px;
 }
+
+#bookDialog {
+    width: 250px;
+    border-radius: 5px;
+    padding: 20px;
+    margin: auto;
+    background-color: #DECAC2;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formTitle {
+    font-size: x-large;
+}
+
+.closeButton {
+    width: 25px;
+    font-weight: bold;
+}
+
+.submitButton {  
+    width: 100px;
+    margin-top: 10px;
+    background-color: #F6F4F0;
+    border-width: 1px;
+    padding: 2px;
+}
+
+.submitButton:hover {
+    background-color: #e2e0dc;
+}
+
+.submit {
+    align-self: flex-end;
+}
+
+.topForm {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #453F3A;
+    padding-bottom: 10px;
+}
+
+ul {
+    padding-top: 10px;
+}
+
+form li {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    color: #655c55;
+}
+
+select:focus {
+    outline-color: #DECAC2;
+}
+
+input:focus {
+    outline-color: #DECAC2;
+}

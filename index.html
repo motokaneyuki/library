@@ -14,8 +14,8 @@
             <dialog id="bookDialog">
                 <form>
                     <div class="topForm">
-                        <div>Add New Book</div>
-                        <button type="button" command="close" commandfor="bookDialog" class="=closeButton">x</button>
+                        <div class="formTitle">Add New Book</div>
+                        <button type="button" command="close" commandfor="bookDialog" class="closeButton">x</button>
                     </div>
                     <ul>
                         <li>
@@ -34,10 +34,14 @@
                             <label for="read">Status</label>
                             <select name="Status">
                                 <option value="Read">Read</option>
+                                <option value="Reading">Reading</option>
                                 <option value="Unread">Unread</option>
                             </select>
                         </li>
                     </ul>
+                    <div class="submit">
+                        <button class="submitButton">Submit</button>
+                    </div>
                 </form>
             </dialog>
         </div>
