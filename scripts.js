@@ -1,5 +1,6 @@
 const container = document.querySelector('.container');
 const submit = document.querySelector('.submitButton');
+const dialog = document.querySelector('dialog');
 
 const sampleBook1 = new Book('James Arthur', 'To Be A Swan', 120, 'Read', crypto.randomUUID());
 const sampleBook2 = new Book('Peter Artemis', 'I Want To Dance', 300, 'Reading', crypto.randomUUID());
@@ -23,6 +24,7 @@ function addBookToLibrary(author, title, pages, read) {
     const book = new Book(author, title, pages, read, id);
     myLibrary.push(book);
     clearBooks();
+    dialog.close();
     displayBooks();
 }
 
