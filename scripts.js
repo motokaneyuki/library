@@ -1,4 +1,5 @@
 const container = document.querySelector('.container');
+const submit = document.querySelector('.submitButton');
 
 const sampleBook1 = new Book('James Arthur', 'To Be A Swan', 120, 'Read', crypto.randomUUID());
 const sampleBook2 = new Book('Peter Artemis', 'I Want To Dance', 300, 'Reading', crypto.randomUUID());
@@ -20,7 +21,9 @@ function Book(author, title, pages, read, id) {
 function addBookToLibrary(author, title, pages, read) {
     const id = crypto.randomUUID();
     const book = new Book(author, title, pages, read, id);
-    return myLibrary.push(book);
+    myLibrary.push(book);
+    clearBooks();
+    displayBooks();
 }
 
 function displayBooks() {
@@ -50,5 +53,21 @@ function displayBooks() {
         card.appendChild(read);
     }
 }
+
+function clearBooks(){
+    container.replaceChildren();
+}
+
+submit.addEventListener('click', (e) => {
+    console.log("submit!!")
+    e.preventDefault();
+    // addBookToLibrary();
+    const author = document.querySelector('#author').value;
+    const title = document.querySelector('#title').value;
+    const pages = document.querySelector('#pages').value;
+    const read = document.querySelector('#read').value;
+    console.log(author);
+    addBookToLibrary(author, title, pages, read);
+});
 
 displayBooks();

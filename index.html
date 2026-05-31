@@ -12,7 +12,7 @@
             <h1>My Library</h1>
             <button command="show-modal" commandfor="bookDialog" class="newBookButton">New Book</button>
             <dialog id="bookDialog">
-                <form>
+                <form name="newBook">
                     <div class="topForm">
                         <div class="formTitle">Add New Book</div>
                         <button type="button" command="close" commandfor="bookDialog" class="closeButton">x</button>
@@ -32,7 +32,7 @@
                         </li>
                         <li>
                             <label for="read">Status</label>
-                            <select name="Status">
+                            <select id="read" name="Status">
                                 <option value="Read">Read</option>
                                 <option value="Reading">Reading</option>
                                 <option value="Unread">Unread</option>
@@ -40,7 +40,7 @@
                         </li>
                     </ul>
                     <div class="submit">
-                        <button class="submitButton">Submit</button>
+                        <button type="submit" class="submitButton">Submit</button>
                     </div>
                 </form>
             </dialog>
