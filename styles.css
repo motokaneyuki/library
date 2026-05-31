@@ -40,6 +40,10 @@ h1 {
     background-color: #655c55;    
 }
 
+.newBookButton:focus {
+    outline-color: #DECAC2;
+}
+
 .card {
     border: 1px solid #453F3A;
     border-radius: 5px;
@@ -99,6 +103,10 @@ form {
 .closeButton {
     width: 25px;
     font-weight: bold;
+}
+
+.closeButton:focus {
+    outline-color: #DECAC2;
 }
 
 .submitButton {  
