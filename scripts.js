@@ -65,12 +65,13 @@ function clearBooks(){
 submit.addEventListener('click', (e) => {
     console.log("submit!!")
     e.preventDefault();
-    // addBookToLibrary();
     const author = document.querySelector('#author').value;
     const title = document.querySelector('#title').value;
     const pages = document.querySelector('#pages').value;
     const read = document.querySelector('#read').value;
-    console.log(author);
+    if (title == ''){
+        return alert('Please input a title.');
+    }
     addBookToLibrary(author, title, pages, read);
 });
 
