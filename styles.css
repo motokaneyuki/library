@@ -87,6 +87,20 @@ h1 {
     padding-bottom: 20px;
 }
 
+
+.trash {
+    font-size: x-small;
+    color: #655c55;
+    border: 0.5px solid #DECAC2;
+    width: 60px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.trash:hover {
+    background-color: #DECAC2;
+}
+
 #bookDialog {
     width: 250px;
     border-radius: 5px;

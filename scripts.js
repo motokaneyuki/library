@@ -55,6 +55,22 @@ function displayBooks() {
         read.innerText = 'Status: ' + myLibrary[i].read;
         read.classList.add('read');
         card.appendChild(read);
+
+        const trash = document.createElement('button');
+        trash.innerText = 'DELETE';
+        trash.classList.add('trash');
+        trash.id = myLibrary[i].id;
+        card.appendChild(trash);
+
+        trash.addEventListener('click', (e) => {
+            for(let i = 0; i < myLibrary.length; i++){
+                if (myLibrary[i].id == trash.id){
+                    myLibrary.splice(i, 1);
+                }
+            }
+            clearBooks();
+            displayBooks();
+        })
     }
 }
 
