@@ -101,6 +101,38 @@ h1 {
     background-color: #DECAC2;
 }
 
+.changeStatus {
+    font-size: x-small;
+    color: #655c55;
+    border: 0.5px solid #DECAC2;
+    width: 100px; 
+    margin-bottom: 10px;
+    margin-right: 20px;
+    justify-self: end;
+}
+
+.changeStatus:hover {
+    background-color: #DECAC2;    
+}
+
+.statusForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#statusDialog {
+    width: 250px;
+    border-radius: 5px;
+    padding: 20px;
+    margin: auto;
+    background-color: #DECAC2;
+}
+
+.rightSideButton {
+    align-self: flex-end;
+}
+
 #bookDialog {
     width: 250px;
     border-radius: 5px;
@@ -116,6 +148,7 @@ form {
 
 .formTitle {
     font-size: x-large;
+    border-bottom: 1px solid #453F3A;
 }
 
 .closeButton {
@@ -146,7 +179,6 @@ form {
 .topForm {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #453F3A;
     padding-bottom: 10px;
 }
 

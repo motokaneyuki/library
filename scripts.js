@@ -1,7 +1,9 @@
 const container = document.querySelector('.container');
 const submit = document.querySelector('.submitButton');
-const dialog = document.querySelector('dialog');
+const dialog = document.querySelector('#bookDialog');
+const statusDialog = document.querySelector('#statusDialog');
 const form = document.querySelector('form');
+const statusForm = document.querySelector('.statusForm');
 
 const sampleBook1 = new Book('James Arthur', 'To Be A Swan', 120, 'Read', crypto.randomUUID());
 const sampleBook2 = new Book('Peter Artemis', 'I Want To Dance', 300, 'Reading', crypto.randomUUID());
@@ -68,6 +70,33 @@ function displayBooks() {
                     myLibrary.splice(i, 1);
                 }
             }
+            clearBooks();
+            displayBooks();
+        })
+
+        const changeStatus = document.createElement('button');
+        changeStatus.innerText = 'CHANGE STATUS';
+        changeStatus.classList.add('changeStatus');
+        changeStatus.id = myLibrary[i].id;
+        card.appendChild(changeStatus);
+
+        changeStatus.addEventListener('click', (e) => {
+            statusForm.reset();
+            statusDialog.showModal();
+            statusButton.id = changeStatus.id;
+        })
+
+        const statusButton = document.querySelector('.rightSideButton');
+        
+        statusButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            const status = document.querySelector('#status').value;
+            for(let i = 0; i < myLibrary.length; i++){
+                if(myLibrary[i].id == statusButton.id){
+                    myLibrary[i].read = status;
+                }
+            }
+            statusDialog.close();
             clearBooks();
             displayBooks();
         })
